@@ -1,0 +1,20 @@
+{
+    "name": "gtnh-oc-scripts",
+    "version": "0.0.0",
+    "description": "Scripts for GT:NH OpenComputers written in TypeScript and transpiled to Lua",
+    "author": "Delectarix",
+    "license": "MIT",
+    "scripts": {
+        "clean": "shx rm -rf dist/",
+        "dev": "tstl --watch",
+        "build": "npm run clean && shx mkdir -p dist/ && shx cp src/*.lua dist/ && tstl -p tsconfig.json"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.31",
+        "lua-types": "^2.11.0",
+        "shx": "^0.4.0",
+        "typescript": "^5.9.3",
+        "typescript-to-lua": "^1.33.2",
+        "opencomputers-typescript-type-declaration": "1.1.0"
+    }
+}
