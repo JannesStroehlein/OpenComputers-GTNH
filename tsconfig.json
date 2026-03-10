@@ -9,7 +9,7 @@
         "target": "es6"
     },
     "include": [
-        "src/*.ts",
+        "src/**/*.ts",
     ],
     "tstl": {
         "noHeader": true, // Well, if you want to, you can add headers back
