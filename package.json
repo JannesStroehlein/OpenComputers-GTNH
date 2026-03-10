@@ -1,6 +1,7 @@
 {
   "name": "gtnh-oc-scripts",
   "version": "0.0.0",
+  "type": "module",
   "description": "Scripts for GT:NH OpenComputers written in TypeScript and transpiled to Lua",
   "author": "Delectarix",
   "contributors": [
@@ -10,7 +11,7 @@
   "scripts": {
     "clean": "shx rm -rf dist/",
     "dev": "tstl --watch",
-    "copy:lua": "tsc build/copy-lua-files.ts --target es2020 --module commonjs --moduleResolution node --types node --rootDir build --outDir build --skipLibCheck && node build/copy-lua-files.js",
+    "copy:lua": "node build/copy-lua-files.ts",
     "build": "npm run clean && shx mkdir -p dist/ && npm run copy:lua && tstl -p tsconfig.json"
   },
   "devDependencies": {
