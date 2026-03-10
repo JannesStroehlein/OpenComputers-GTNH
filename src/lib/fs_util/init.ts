@@ -55,5 +55,5 @@ export function readAllText(filePath: string): string {
  */
 export function readAllLines(filePath: string): string[] {
   const text = readAllText(filePath);
-  return text.split(/\r?\n/);
+  return text.split("\n").map((line) => line.trim());
 }

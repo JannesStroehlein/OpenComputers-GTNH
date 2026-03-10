@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "shx rm -rf dist/",
     "dev": "tstl --watch",
-    "build": "npm run clean && shx mkdir -p dist/ && shx cp src/*.lua dist/ && tstl -p tsconfig.json"
+    "copy:lua": "tsc build/copy-lua-files.ts --target es2020 --module commonjs --moduleResolution node --types node --rootDir build --outDir build --skipLibCheck && node build/copy-lua-files.js",
+    "build": "npm run clean && shx mkdir -p dist/ && npm run copy:lua && tstl -p tsconfig.json"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",

@@ -9,7 +9,7 @@
     ],
     "target": "es6"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "tstl": {
     "noHeader": true, // Well, if you want to, you can add headers back
     "luaTarget": "5.3", // OpenComputer supports 5.3, so I'll be using 5.3 in this case
@@ -34,7 +34,8 @@
       "thread",
       "transformers",
       "unicode",
-      "uuid"
+      "uuid",
+      "lib.json.init"
     ]
   }
 }

@@ -9,6 +9,7 @@ local __TS__New = ____lualib.__TS__New
 local __TS__StringStartsWith = ____lualib.__TS__StringStartsWith
 local __TS__StringTrim = ____lualib.__TS__StringTrim
 local __TS__StringSplit = ____lualib.__TS__StringSplit
+local __TS__ArrayMap = ____lualib.__TS__ArrayMap
 local ____exports = {}
 local fs = require("filesystem")
 local shell = require("shell")
@@ -66,6 +67,9 @@ end
 -- @throws Will throw an error if the file does not exist or cannot be read.
 function ____exports.readAllLines(self, filePath)
     local text = ____exports.readAllText(nil, filePath)
-    return __TS__StringSplit(text, nil)
+    return __TS__ArrayMap(
+        __TS__StringSplit(text, "\n"),
+        function(____, line) return __TS__StringTrim(line) end
+    )
 end
 return ____exports
