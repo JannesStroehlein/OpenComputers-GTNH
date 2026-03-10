@@ -1,41 +1,40 @@
 {
-    "compilerOptions": {
-        "rootDir": "src/",
-        "outDir": "dist/", 
-        "types": [
-            "@typescript-to-lua/language-extensions",
-             "lua-types/5.2", 
-             "opencomputers-typescript-type-declaration"],
-        "target": "es6"
-    },
-    "include": [
-        "src/**/*.ts",
+  "compilerOptions": {
+    "rootDir": "src/",
+    "outDir": "dist/",
+    "types": [
+      "@typescript-to-lua/language-extensions",
+      "lua-types/5.2",
+      "opencomputers-typescript-type-declaration"
     ],
-    "tstl": {
-        "noHeader": true, // Well, if you want to, you can add headers back
-        "luaTarget": "5.3", // OpenComputer supports 5.3, so I'll be using 5.3 in this case
-        // It's in /lib/, so it won't try and reolsve those libraries provided by OpenOS
-        "noResolvePaths": [
-            "colors", 
-            "component", 
-            "computer",
-            "event",
-            "filesystem", 
-            "internet", 
-            "keyboard", 
-            "note", 
-            "os", 
-            "process", 
-            "robot",
-            "serialization", 
-            "shell", 
-            "sides", 
-            "term", 
-            "text", 
-            "thread", 
-            "transformers", 
-            "unicode",
-            "uuid"
-        ] 
-    }
+    "target": "es6"
+  },
+  "include": ["src/**/*.ts"],
+  "tstl": {
+    "noHeader": true, // Well, if you want to, you can add headers back
+    "luaTarget": "5.3", // OpenComputer supports 5.3, so I'll be using 5.3 in this case
+    // It's in /lib/, so it won't try and reolsve those libraries provided by OpenOS
+    "noResolvePaths": [
+      "colors",
+      "component",
+      "computer",
+      "event",
+      "filesystem",
+      "internet",
+      "keyboard",
+      "note",
+      "os",
+      "process",
+      "robot",
+      "serialization",
+      "shell",
+      "sides",
+      "term",
+      "text",
+      "thread",
+      "transformers",
+      "unicode",
+      "uuid"
+    ]
+  }
 }
